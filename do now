@@ -1,0 +1,29 @@
+//tj wangchuk
+//do now 2 short
+//12/18/24
+//includes
+#include <iostream>
+#include <cmath>
+#include <ctime>
+using namespace std;
+double roundToTwoDecimalPlaces(double number) {
+    return std::round(number * 100) / 100;
+}
+
+int main() {
+    //create double input
+    double inputNumber;
+//user input
+    cout << "Enter a double value: ";
+    cin >> inputNumber;
+//rounds number
+    double roundedNumber = roundToTwoDecimalPlaces(inputNumber);
+
+    cout << "The number rounded to 2 decimal places is: " << roundedNumber <<endl;
+    //picks random
+    srand((int)time(0));
+    int r = (rand() % 10) + 1;
+    cout << r << " ";
+
+    return 0;
+}
